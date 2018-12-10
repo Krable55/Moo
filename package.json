@@ -1,0 +1,35 @@
+{
+  "name": "moo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "commit": "npm run build && npm run git add --all && npm run git commit && npm run git push",
+    "build": "webpack -d --watch"
+  },
+  "author": "Kyle Rable",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "6.24.1",
+    "babel-plugin-react": "1.0.0",
+    "babel-preset-react": "6.24.1",
+    "express": "^4.16.4",
+    "jquery": "^2.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-core": "6.24.1",
+    "babel-loader": "7.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "6.24.1",
+    "exports-loader": "0.6.4",
+    "react-addons-test-utils": "15.6.0",
+    "react-dom": "0.14.9",
+    "uglifyjs-webpack-plugin": "0.4.3",
+    "webpack": "2.6.1"
+  }
+}
