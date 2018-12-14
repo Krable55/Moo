@@ -8,10 +8,13 @@ class Moo extends React.Component {
       title: ""
     };
   }
+  getInfo(){
+
+  }
   render() {
     return (
       
-      <div id="test"> RENDERED
+      <div id="test"> 
       <Cow />
       </div>
     );

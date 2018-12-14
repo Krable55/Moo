@@ -11,8 +11,6 @@ var Cow = db.define('cow', {
   name: Sequelize.STRING,
   description: Sequelize.STRING
 });
-
-
 // var connection = mysql.createConnection({
 //   user: 'root',
 //   password: '',
@@ -28,11 +26,11 @@ var Cow = db.define('cow', {
 Cow.sync()
   .then(function() {
     // Now instantiate an object and save it:
-    return Cow.create({name: 'Bessie', description: 'A nice cow with a generic name'});
+    return Cow.findOrCreate({where: {name: 'Bessie', description: 'A nice cow with a generic name'}});
   })
   .then(function() {
     // Now instantiate an object and save it:
-    return Cow.create({name: 'Buttercup', description: 'A yellow cow'});
+    return Cow.findOrCreate({where: {name: 'Buttercup', description: 'A yellow cow'}});
   })
   .then(function() {
     // Retrieve objects from the database:
@@ -44,3 +42,5 @@ Cow.sync()
     console.error(err);
     db.close();
   });
+
+  exports.Cow = Cow;

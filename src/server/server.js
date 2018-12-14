@@ -1,5 +1,6 @@
-var express = require('express');
-var db = require('./db');
+const express = require('express');
+const db = require('./db');
+const router = require('./routes.js');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const path = require('path');
@@ -16,3 +17,4 @@ app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
 });
 
+app.use('/', router)

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/server/server.js",
+    "start": "nodemon ./src/server/server.js",
     "commit": "npm run build && npm run git add --all && npm run git commit && npm run git push",
     "build": "webpack -d --watch"
   },
